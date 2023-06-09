@@ -1,26 +1,28 @@
 import Image from 'next/image'
 import {IconBrandGithub, IconBrandLinkedin, IconBrandTwitter, IconMail} from "@tabler/icons-react";
+import React from "react";
+import Link from "next/link";
 
 export default function Home() {
     const features = [
         {
             name: 'Twitter',
-            href: '#',
+            href: 'https://twitter.com/MartinMcGirk',
             icon: IconBrandTwitter,
         },
         {
             name: 'LinkedIn',
-            href: '#',
+            href: 'https://www.linkedin.com/in/martin-mcgirk',
             icon: IconBrandLinkedin,
         },
         {
             name: 'Email',
-            href: '#',
+            href: 'mailto:martin@mcgirk.com',
             icon: IconMail,
         },
         {
             name: 'Github',
-            href: '#',
+            href: 'https://github.com/martinmcgirk',
             icon: IconBrandGithub,
         },
     ]
@@ -48,12 +50,12 @@ export default function Home() {
         <div className="mx-auto w-full lg:w-auto mt-8 max-w-3xl sm:mt-20 lg:mt-24">
             <dl className="grid lg:max-w-2xl grid-cols-1 gap-x-8 gap-y-4 lg:gap-y-16 lg:max-w-none lg:grid-cols-4">
                 {features.map((feature) => (
-                    <a key={feature.name} className="transition ease-in-out flex flex-col bg-gray-900 rounded-2xl lg:py-10 px-20 shadow-xl cursor-pointer hover:bg-gray-950 hover:scale-105">
+                    <Link href={feature.href} key={feature.name} className="transition ease-in-out flex flex-col bg-gray-900 rounded-2xl lg:py-10 px-20 shadow-xl cursor-pointer hover:bg-gray-950 hover:scale-105">
                         <dt className="flex flex-col items-center gap-x-3 text-base font-semibold leading-7 text-white">
                             <feature.icon className="h-20 w-20 text-gray-100" aria-hidden="true" />
                             <h2 className="text-xl">{feature.name}</h2>
                         </dt>
-                    </a>
+                    </Link>
                 ))}
             </dl>
         </div>
