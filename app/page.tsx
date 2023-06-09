@@ -29,7 +29,7 @@ export default function Home() {
     ]
 
     return (
-        <main className="bg-gray-50 min-h-screen flex flex-col justify-center items-center py-8 px-4 lg:px-8">
+        <main className="bg-gray-50  min-h-screen flex flex-col justify-center items-center py-8 px-4 lg:px-8 lg:py-24 dark:bg-gray-900">
             <div className="flex flex-col md:flex-row items-center gap-8">
                 <Image
                     src="/images/martin-mcgirk.jpg"
@@ -39,16 +39,16 @@ export default function Home() {
                     className="rounded-full shadow-xl border-4 border-sky-600"
                 />
                 <div>
-                    <h1 className="text-4xl font-extrabold tracking-tight uppercase">
+                    <h1 className="text-4xl font-extrabold tracking-tight uppercase dark:text-gray-50">
                         Martin McGirk
                     </h1>
-                    <p className="text-2xl text-gray-600 py-2 lg:pt-10 lg:pb-2">
+                    <p className="text-2xl text-gray-600 py-2 lg:pt-10 lg:pb-2 dark:text-gray-400">
                         Contract Lead Software Engineer in Sydney, Australia
                     </p>
-                    <p className="text-lg text-gray-600 ">
+                    <p className="text-lg text-gray-600 dark:text-gray-400">
                         <Link href="mailto:martin@mcgirk.com">martin@mcgirk.com</Link>
                     </p>
-                    <p className="text-lg text-gray-600 lg:pb-10">
+                    <p className="text-lg text-gray-600 lg:pb-10 dark:text-gray-400">
                         <Link href="tel:+61433709600">+61 433 709 600</Link>
                     </p>
                 </div>
@@ -59,7 +59,7 @@ export default function Home() {
                     {links.map((link, idx) => (
                         <AnimatedPanel key={link.href} index={idx}>
                             <Link href={link.href} key={link.name}
-                                  className="transition ease-in-out flex flex-col bg-gray-900 rounded-2xl py-2 lg:py-10 px-20 shadow-xl cursor-pointer hover:bg-gray-950 hover:scale-105">
+                                  className="transition ease-in-out flex flex-col bg-gray-900 rounded-2xl py-2 lg:py-10 px-20 shadow-xl cursor-pointer hover:bg-gray-950 hover:scale-105 dark:bg-gray-800">
                                 <dt className="flex flex-col items-center gap-x-3 text-base font-semibold leading-7 text-white">
                                     <link.icon className="h-10 w-10 lg:h-20 lg:w-20 text-gray-100" aria-hidden="true"/>
                                     <h2 className="text-xl">{link.name}</h2>
