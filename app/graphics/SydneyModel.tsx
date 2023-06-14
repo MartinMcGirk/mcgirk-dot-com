@@ -20,13 +20,19 @@ export function SydneyModel(props: any) {
         }
     }, []);
 
+    const clamp = (val: number, min: number, max: number) => {
+        return val > max ? max : val < min ? min : val;
+    }
+
     useFrame((state, delta, frame) => {
         if (!groupRef.current) return;
         const parallaxX = -mouseCoords[0] * 0.5;
         const parallaxY = mouseCoords[1] * 0.3;
 
-        groupRef.current.rotation.y += (parallaxX - groupRef.current.rotation.y) * 1 * delta;
-        groupRef.current.rotation.x += (parallaxY - groupRef.current.rotation.x) * 1 * delta;
+        const newRotationY = groupRef.current.rotation.y + (parallaxX - groupRef.current.rotation.y) * delta;
+        const newRotationX = groupRef.current.rotation.x + (parallaxY - groupRef.current.rotation.x) * delta;
+        groupRef.current.rotation.y = newRotationY;
+        groupRef.current.rotation.x = clamp(newRotationX, -0.15, 0.15);
     });
 
     // @ts-ignore
