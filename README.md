@@ -1,4 +1,4 @@
-# Mcgirk.com
+# McGirk.com
 
 This is my personal site that is running on [mcgirk.com](https://www.mcgirk.com). It's a very simple landing page with contact details displayed nicely.
 
