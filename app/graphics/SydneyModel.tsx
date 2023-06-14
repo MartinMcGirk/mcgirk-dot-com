@@ -31,7 +31,8 @@ export function SydneyModel(props: any) {
 
         const newRotationY = groupRef.current.rotation.y + (parallaxX - groupRef.current.rotation.y) * delta;
         const newRotationX = groupRef.current.rotation.x + (parallaxY - groupRef.current.rotation.x) * delta;
-        groupRef.current.rotation.y = newRotationY;
+
+        groupRef.current.rotation.y = clamp(newRotationY, -0.25, 0.25)
         groupRef.current.rotation.x = clamp(newRotationX, -0.15, 0.15);
     });
 
@@ -52,4 +53,4 @@ export function SydneyModel(props: any) {
     );
 }
 
-useGLTF.preload("/models/sydney.gltf");
+// useGLTF.preload("/models/sydney.gltf");
