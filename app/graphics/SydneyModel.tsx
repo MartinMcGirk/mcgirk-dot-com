@@ -27,7 +27,7 @@ export function SydneyModel(props: any) {
     useFrame((state, delta, frame) => {
         if (!groupRef.current) return;
         const parallaxX = -mouseCoords[0] * 0.5;
-        const parallaxY = mouseCoords[1] * 0.3;
+        const parallaxY = -mouseCoords[1] * 0.3;
 
         const newRotationY = groupRef.current.rotation.y + (parallaxX - groupRef.current.rotation.y) * delta;
         const newRotationX = groupRef.current.rotation.x + (parallaxY - groupRef.current.rotation.x) * delta;
