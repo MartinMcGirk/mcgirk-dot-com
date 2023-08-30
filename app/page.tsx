@@ -4,18 +4,19 @@ import Image from 'next/image'
 import Link from "next/link";
 import AnimatedPanel from "@/app/AnimatedPanel";
 import ThreeRoot from "@/app/graphics/three-root";
+import MovingPicture from "@/app/components/MovingPicture";
 
 export default function Home() {
     const links = [
         {
-            name: 'Twitter',
-            href: 'https://twitter.com/MartinMcGirk',
-            icon: IconBrandTwitter,
-        },
-        {
             name: 'LinkedIn',
             href: 'https://www.linkedin.com/in/martin-mcgirk',
             icon: IconBrandLinkedin,
+        },
+        {
+            name: 'Twitter',
+            href: 'https://twitter.com/MartinMcGirk',
+            icon: IconBrandTwitter,
         },
         {
             name: 'Email',
@@ -31,19 +32,13 @@ export default function Home() {
 
     return (
         <>
-            <section className="hidden lg:block fixed top-0 bottom-0 left-0 right-0 dark:bg-gray-900" style={{zIndex: -1}}>
+            <section className="hidden lg:block fixed top-0 bottom-0 left-0 right-0 bg-blue-100 dark:bg-gray-900" style={{zIndex: -1}}>
                 <ThreeRoot />
             </section>
             <main className="min-h-screen flex flex-col justify-center items-center py-8 px-4 lg:px-8 lg:py-24 dark:bg-gray-900 lg:dark:bg-transparent" style={{zIndex: 100}}>
                 <div className="flex flex-col md:flex-row items-center gap-8">
-                    <Image
-                        src="/images/martin-mcgirk.jpg"
-                        priority={true}
-                        alt="Martin McGirk"
-                        width={300}
-                        height={300}
-                        className="rounded-full shadow-xl border-4 border-sky-600"
-                    />
+                    <MovingPicture />
+
                     <div>
                         <h1 className="text-4xl font-extrabold tracking-tight uppercase dark:text-gray-50">
                             Martin McGirk

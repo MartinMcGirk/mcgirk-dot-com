@@ -11,12 +11,12 @@ export function SydneyModel(props: any) {
 
     useEffect(() => {
         if (window) {
-            window.onmousemove = (e) => {
+            window.addEventListener('mousemove', (e) => {
                 setMouseCoords([
                     e.clientX / window.innerWidth - 0.5,
                     e.clientY / window.innerHeight - 0.5
                 ]);
-            }
+            });
         }
     }, []);
 
