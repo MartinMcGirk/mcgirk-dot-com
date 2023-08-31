@@ -29,7 +29,7 @@ const MovingPicture = () => {
                 style={{
                     transitionTimingFunction: "ease",
                     transitionDuration: "0.15s",
-                    transform: `translateY(${mouseCoords[1] * -10}px) translateX(${mouseCoords[0] * -10}px)`,
+                    transform: `translateY(${mouseCoords[1] * -20}px) translateX(${mouseCoords[0] * -20}px)`,
                 }}
             />
             <Image
@@ -42,7 +42,7 @@ const MovingPicture = () => {
                 style={{
                     transitionTimingFunction: "ease",
                     transitionDuration: "0.15s",
-                    transform: `translateY(${mouseCoords[1] * -2}px) translateX(${mouseCoords[0] * -2}px)`,
+                    transform: `translateY(${mouseCoords[1] * -7}px) translateX(${mouseCoords[0] * -7}px)`,
                 }}
             />
         </div>
