@@ -32,7 +32,7 @@ export default function Home() {
 
     return (
         <>
-            <section className="hidden lg:block fixed top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-white to-blue-300 dark:bg-gray-900" style={{zIndex: -1}}>
+            <section className="hidden lg:block fixed top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-white via-blue-50 to-blue-300 dark:bg-gray-900" style={{zIndex: -1}}>
                 <ThreeRoot />
             </section>
             <main className="min-h-screen flex flex-col justify-center items-center py-8 px-4 lg:px-8 lg:py-24 dark:bg-gray-900 lg:dark:bg-transparent" style={{zIndex: 100}}>
