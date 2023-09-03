@@ -92,13 +92,13 @@ export default function Home() {
     <>
       <div className="relative h-[100vh] md:h-[100vh]">
         <section
-          className="fixed top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-white via-blue-50 to-blue-300 dark:bg-gray-900"
+          className="fixed top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-white via-blue-50 to-blue-300 dark:from-indigo-800 dark:via-50% dark:to-indigo-950"
           style={{ zIndex: -1 }}
         >
           <ThreeRoot />
         </section>
         <main
-          className="h-full flex flex-col justify-start md:justify-center items-center py-8 px-4 lg:px-8 lg:py-24 dark:bg-gray-900 lg:dark:bg-transparent"
+          className="h-full flex flex-col justify-between md:justify-start items-center py-8 px-4 lg:px-8 lg:py-24 dark:bg-gray-900 lg:dark:bg-transparent"
           style={{ zIndex: 100 }}
         >
           <div className="flex flex-col md:flex-row items-center gap-8">
