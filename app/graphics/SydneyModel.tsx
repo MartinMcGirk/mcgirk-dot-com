@@ -43,7 +43,6 @@ export function SydneyModel(props: any) {
   // @ts-ignore
   // const { nodes, materials } = useGLTF("/models/Sydney-compressed.gltf");
   const { nodes, materials } = useGLTF("/models/test2.gltf");
-  console.log(nodes);
   return (
     <group {...props} dispose={null} ref={groupRef}>
       <mesh
