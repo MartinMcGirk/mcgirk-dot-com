@@ -15,6 +15,7 @@ const ContentWithStickyImage = () => {
                 I lead software teams that deliver.
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700 dark:text-blue-50">
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 Hi, nice to meet you! I'm Martin McGirk. I'm a Software Team
                 Lead in Sydney, Australia, with nearly 15 years experience
                 specialising in web development.
@@ -54,6 +55,7 @@ const ContentWithStickyImage = () => {
                     application development, I like to think I set myself apart
                     with my ability to focus on how software can solve business
                     problems, rather than just how it can solve technical ones.
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                     So far I've been doing that across the construction,
                     finance, education, oil & gas, and retail sectors.
                   </span>
@@ -65,7 +67,9 @@ const ContentWithStickyImage = () => {
                       I have full-stack experience.
                     </strong>{" "}
                     Full stack web development is where I started. My degree is
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                     in software engineering and I've been working with code
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                     since 2011. Since then I've done backend, frontend,
                     databases, (some) devops, and everything in between. I can
                     bring that holistic, technical view of how a prodcut is

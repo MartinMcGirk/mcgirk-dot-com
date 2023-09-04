@@ -3,7 +3,6 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { SydneyModelMoving } from "@/app/graphics/SydneyModelMoving";
-import Laptop from "@/app/graphics/Laptop";
 
 const Lights = () => {
   return (
@@ -29,19 +28,6 @@ export default function ThreeRoot() {
     >
       <Lights />
       <SydneyModelMoving />
-    </Canvas>
-  );
-}
-
-export function LaptopRoot() {
-  return (
-    <Canvas
-      shadows={true}
-      style={{ width: "100%", height: "100%" }}
-      camera={{ position: [-1, 0.25, 1.3], rotation: [0, 0, 0] }}
-    >
-      <Lights />
-      <Laptop />
     </Canvas>
   );
 }

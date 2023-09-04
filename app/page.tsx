@@ -9,8 +9,8 @@ import Link from "next/link";
 import AnimatedPanel from "@/app/AnimatedPanel";
 import ThreeRoot from "@/app/graphics/three-root";
 import MovingPicture from "@/app/components/MovingPicture";
-import ContentWithStickyImage from "@/app/components/ContentWithStickyImage";
 import ScrollDown from "@/app/components/ScrollDown";
+import ContentWithStickyImage from "@/app/components/ContentWithStickyImage";
 
 export default function Home() {
   const links = [
@@ -101,6 +101,7 @@ export default function Home() {
               Sound like I can help you?
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-800">
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               Get in touch and let's talk about how I can help deliver your next
               project.
             </p>
