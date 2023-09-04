@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
-export function SydneyModel(props: any) {
+export function SydneyModelMoving(props: any) {
   const groupRef = useRef<THREE.Group>(null!);
 
   const [mouseCoords, setMouseCoords] = React.useState([0, 0]);
@@ -34,7 +34,7 @@ export function SydneyModel(props: any) {
   });
 
   // @ts-ignore
-  const { nodes, materials } = useGLTF("/models/test14.gltf");
+  const { nodes, materials } = useGLTF("/models/MovingCity/city.gltf");
 
   const ferryGroup = useRef();
   const ferry3Group = useRef();
@@ -43,12 +43,24 @@ export function SydneyModel(props: any) {
     nodes: ferryNodes,
     materials: ferryMaterials,
     animations: ferryAnimations,
-  } = useGLTF("/models/ferries2.gltf");
+  } = useGLTF("/models/MovingCity/ferries.gltf");
   const { actions } = useAnimations(ferryAnimations, ferryGroup);
   const { actions: f3actions } = useAnimations(ferryAnimations, ferry3Group);
   useEffect(() => {
-    actions?.F1Move.play();
-    f3actions?.F3Move.play();
+    actions?.F1Anim.play();
+    f3actions?.F3Anim.play();
+  }, []);
+
+  const cloudGroup = useRef();
+
+  const {
+    nodes: cloudNodes,
+    materials: cloudMaterials,
+    animations: cloudAnimations,
+  } = useGLTF("/models/MovingCity/clouds.gltf");
+  const { actions: cloudactions } = useAnimations(cloudAnimations, cloudGroup);
+  useEffect(() => {
+    cloudactions?.CloudsAnim.play();
   }, []);
 
   return (
@@ -60,6 +72,17 @@ export function SydneyModel(props: any) {
           geometry={nodes.Water.geometry}
           material={materials["Material.001"]}
         />
+        <group name="Clouds" ref={cloudGroup}>
+          <mesh
+            name="Water003"
+            castShadow={true}
+            receiveShadow={true}
+            geometry={cloudNodes.Water003.geometry}
+            material={cloudMaterials["Material.001"]}
+            // ref={cloudGroup}
+            // position={[0, 0, -0.126]}
+          />
+        </group>
         <group name="Ferry1" ref={ferryGroup}>
           <mesh
             name="Cube007"
