@@ -11,6 +11,7 @@ import AnimatedPanel from "@/app/AnimatedPanel";
 import ThreeRoot from "@/app/graphics/three-root";
 import MovingPicture from "@/app/components/MovingPicture";
 import ContentWithStickyImage from "@/app/components/ContentWithStickyImage";
+import ScrollDown from "@/app/components/ScrollDown";
 
 export default function Home() {
   const links = [
@@ -96,6 +97,9 @@ export default function Home() {
           style={{ zIndex: -1 }}
         >
           <ThreeRoot />
+          <div className="absolute bottom-0 w-full flex flex-row justify-center">
+            <ScrollDown />
+          </div>
         </section>
         <main
           className="h-full flex flex-col justify-between md:justify-start items-center py-8 px-4 lg:px-8 lg:py-24 dark:bg-gray-900 lg:dark:bg-transparent"
