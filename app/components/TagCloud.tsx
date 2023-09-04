@@ -30,7 +30,7 @@ const TagSection: React.FC<TagSectionProps> = ({ tags, title, color }) => {
   return (
     <>
       <motion.h2
-        className="font-bold text-xl mt-8"
+        className="font-bold text-xl mt-8 text-gray-900 dark:text-blue-400"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}

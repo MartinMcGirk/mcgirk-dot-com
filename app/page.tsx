@@ -3,6 +3,7 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandTwitter,
+  IconCircleChevronsDown,
   IconMail,
 } from "@tabler/icons-react";
 import Link from "next/link";
@@ -11,6 +12,7 @@ import ThreeRoot from "@/app/graphics/three-root";
 import MovingPicture from "@/app/components/MovingPicture";
 import ScrollDown from "@/app/components/ScrollDown";
 import ContentWithStickyImage from "@/app/components/ContentWithStickyImage";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const links = [
@@ -44,12 +46,10 @@ export default function Home() {
           style={{ zIndex: -1 }}
         >
           <ThreeRoot />
-          {/*<div className="absolute bottom-0 w-full flex flex-row justify-center">*/}
-          {/*  <ScrollDown />*/}
-          {/*</div>*/}
         </section>
+        <ScrollDown />
         <main
-          className="h-full flex flex-col justify-between md:justify-start items-center py-8 px-4 lg:px-8 lg:py-24 dark:bg-gray-900 lg:dark:bg-transparent"
+          className="h-full flex flex-col justify-between md:justify-start items-center py-8 px-4 lg:px-8 lg:py-24 lg:dark:bg-transparent"
           style={{ zIndex: 100 }}
         >
           <div className="flex flex-col md:flex-row items-center gap-8">
@@ -71,7 +71,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mx-auto w-full lg:w-auto mt-8 max-w-3xl sm:mt-20 lg:mt-24">
-            <dl className="grid lg:max-w-2xl grid-cols-4 gap-x-2 md:gap-x-8 gap-y-4 lg:gap-y-16 lg:max-w-none lg:grid-cols-4">
+            <dl className="hidden lg:grid lg:max-w-2xl grid-cols-4 gap-x-2 md:gap-x-8 gap-y-4 lg:gap-y-16 lg:max-w-none lg:grid-cols-4">
               {links.map((link, idx) => (
                 <AnimatedPanel key={link.href} index={idx}>
                   <Link
@@ -100,7 +100,7 @@ export default function Home() {
             <h2 className="text-4xl font-extrabold tracking-tight dark:text-gray-50">
               Sound like I can help you?
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-800">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-800 dark:text-gray-200">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
               Get in touch and let's talk about how I can help deliver your next
               project.
