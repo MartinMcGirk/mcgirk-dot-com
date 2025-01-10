@@ -2,7 +2,7 @@ import React from "react";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
-  IconBrandTwitter,
+  IconBrandX,
   IconCircleChevronsDown,
   IconMail,
 } from "@tabler/icons-react";
@@ -22,14 +22,14 @@ export default function Home() {
       icon: IconBrandLinkedin,
     },
     {
-      name: "Twitter",
-      href: "https://twitter.com/MartinMcGirk",
-      icon: IconBrandTwitter,
-    },
-    {
       name: "Email",
       href: "mailto:martin@mcgirk.com",
       icon: IconMail,
+    },
+    {
+      name: "X",
+      href: "https://twitter.com/MartinMcGirk",
+      icon: IconBrandX,
     },
     {
       name: "Github",
@@ -77,13 +77,16 @@ export default function Home() {
                   <Link
                     href={link.href}
                     key={link.name}
-                    className="transition ease-in-out flex flex-col bg-gray-900 rounded-2xl py-5 lg:py-5 px-5 md:px-20 shadow-xl cursor-pointer hover:bg-gray-950 hover:scale-105 dark:bg-gray-800"
+                    className="transition ease-in-out flex flex-col rounded-2xl py-5 lg:py-5 px-5 md:px-20 shadow-xl cursor-pointer hover:scale-105 backdrop-blur-sm bg-gray-900/70 hover:bg-gray-950/80 dark:bg-gray-800/70 dark:hover:bg-gray-800/80 border border-gray-700/30"
                   >
                     <dt className="flex flex-col items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                      <link.icon
-                        className="h-10 w-10 lg:h-20 lg:w-20 text-gray-100"
-                        aria-hidden="true"
-                      />
+                      <div className="w-10 h-10 lg:w-20 lg:h-20 flex items-center justify-center">
+                        <link.icon
+                          className="w-full h-full text-gray-100"
+                          aria-hidden="true"
+                        />
+
+                      </div>
                       <h2 className="hidden md:block text-xl">{link.name}</h2>
                     </dt>
                   </Link>
@@ -112,7 +115,7 @@ export default function Home() {
                     <Link
                       href={link.href}
                       key={link.name}
-                      className="transition ease-in-out flex flex-col bg-gray-900 rounded-2xl py-5 lg:py-5 px-5 md:px-20 shadow-xl cursor-pointer hover:bg-gray-950 hover:scale-105 dark:bg-gray-800"
+                      className="transition ease-in-out flex flex-col rounded-2xl py-5 lg:py-5 px-5 md:px-20 shadow-xl cursor-pointer hover:scale-105 backdrop-blur-sm bg-gray-900/70 hover:bg-gray-950/80 dark:bg-gray-800/70 dark:hover:bg-gray-800/80 border border-gray-700/30"
                     >
                       <dt className="flex flex-col items-center gap-x-3 text-base font-semibold leading-7 text-white">
                         <link.icon
